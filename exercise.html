@@ -181,12 +181,41 @@
       </footer>
     </div>
 
+    <!-- exercise: enable below message -->
+
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script type="text/javascript">
 
         console.log("Thanks for the page visit!")
 
+
+        //
+        // excercise: add in BUTTON
+        //
+
+        var clickMeButton = document.getElementById("click-me")
+        //exrecise: overwrites html properties with text below
+        var clickCountSpan = document.getElementById("click-count")
+        var clickCount = 0
+
+        function handleClick() {
+            console.log("---------------------")
+            //EXERCISE: Clicking button shows up message below in CONSOLE, not on page
+            console.log("YOU CLICKED ME!")
+            clickCount += 1
+            console.log("CLICK COUNT:", clickCount)
+            clickCountSpan.textContent = clickCount
+        }
+
+        // exercise: Adding event listener below
+        clickMeButton.addEventListener("click", handleClick)
+
+        //example invocation of the function:
+        //exercise: trigger whenever click even happens"
+        handleClick()
+
+        //THE CONSOLE MAKES USE OF THE GLOBAL SCOPE OF THE CODE
     </script>
   </body>
 </html>
