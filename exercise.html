@@ -203,6 +203,16 @@
             console.log("---------------------")
             //EXERCISE: Clicking button shows up message below in CONSOLE, not on page
             console.log("YOU CLICKED ME!")
+
+            
+            //CLASS: invoke our google analytics event tracking 
+            //function within the scope of our click handler function. 
+            //Like this (where "resume_download" is the name of your 
+            //event):
+            
+            // send event to GA
+            gtag("event", "resume_download")
+
             clickCount += 1
             console.log("CLICK COUNT:", clickCount)
             clickCountSpan.textContent = clickCount
