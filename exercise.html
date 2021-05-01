@@ -211,7 +211,7 @@
             //event):
             
             // send event to GA
-            gtag("event", "resume_download")
+            //gtag("event", "resume_download")
 
             clickCount += 1
             console.log("CLICK COUNT:", clickCount)
@@ -226,6 +226,30 @@
         handleClick()
 
         //THE CONSOLE MAKES USE OF THE GLOBAL SCOPE OF THE CODE
+
+
+    // Form submit
+    //
+// FORM SUBMIT
+//
+
+var submitButton = document.getElementById("my-button")
+var emailInput = document.getElementById("my-email")
+var passwordInput = document.getElementById("my-password")
+// etc...
+
+function handleSubmit(event) {
+  event.preventDefault() // because our button happens to be in a form, we prevent the default form action that would be triggered when the form is submitted
+
+  console.log("---------------------")
+  console.log("FORM SUBMIT...")
+  console.log("EMAIL:", emailInput.value)
+  console.log("PASSWORD:", passwordInput.value)
+  // etc...
+}
+
+submitButton.addEventListener("click", handleSubmit)
+
     </script>
   </body>
 </html>
